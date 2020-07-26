@@ -6,9 +6,13 @@
     --purple: hsla(285, 100%, 56%, 1);
     --yellow: hsla(59, 100%, 56%, 1);
     --coffee: hsla(27, 100%, 30%, 1);
+    --white: #ffffff;
+    --black: #000000;
     /* size */
     --size-a: 350px;
+    --radius: 25px;
 }
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 *,
 *:before,
 *:after{
@@ -19,24 +23,78 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 /* Principal container of the card */
-.card-container
-{
-    background-color: var(--red);
+.card-container{
     width: var(--size-a);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    border-radius: 25px;
+    border-radius: var(--radius);
 }
 /* Main img */
 .card-img{
+    border-start-end-radius: var(--radius);
+    border-start-start-radius: var(--radius);
+    background: linear-gradient(310deg, var(--red) 65%,var(--black) );
     width: var(--size-a);
     display: flex;
 }
-.card-img img{
+.card-img > img{
     width: inherit;
 }
 /* Body */
+.card-body{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Fonts & other values */
+.card-body .name-pj,
+.card-body .title-pj,
+.card-body .card-description,
+.value,
+.value-skills{
+    text-align: center;
+    display: inline;
+    font-family: 'Dancing Script', cursive;
+}
+.name-pj{
+    margin: -2px 0;
+    font-size: 32px;
+}
+.title-pj{
+    color: var(--red);
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+.card-description{
+    font-size: 16px;
+}
+.value{
+    color: var(--white);
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Footer */
+.card-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-end-start-radius: var(--radius);
+    border-end-end-radius: var(--radius);
+    background-color: var(--orange);
+}
+.skills{
+    flex-grow: 1;
+    text-align: center;
+}
+.skills > img{
+    width: 55px;
+}
+.value{
+    display: flex;
+    flex-direction: column;
+}
