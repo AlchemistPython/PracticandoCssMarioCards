@@ -1,0 +1,42 @@
+:root{
+    --red: hsla(360, 100%, 41%, 1);
+    --green: hsla(127, 100%, 41%, 1);
+    --pink: hsla(318, 100%, 60%, 1);
+    --orange: hsla(23, 100%, 56%, 1);
+    --purple: hsla(285, 100%, 56%, 1);
+    --yellow: hsla(59, 100%, 56%, 1);
+    --coffee: hsla(27, 100%, 30%, 1);
+    /* size */
+    --size-a: 350px;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+/* Card place */
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* Principal container of the card */
+.card-container
+{
+    background-color: var(--red);
+    width: var(--size-a);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 25px;
+}
+/* Main img */
+.card-img{
+    width: var(--size-a);
+    display: flex;
+}
+.card-img img{
+    width: inherit;
+}
+/* Body */
