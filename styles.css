@@ -3,14 +3,16 @@
     --green: hsla(127, 100%, 41%, 1);
     --pink: hsla(318, 100%, 60%, 1);
     --orange: hsla(23, 100%, 56%, 1);
+    --orangeL: hsla(28, 100%, 68%, 1);
     --purple: hsla(285, 100%, 56%, 1);
     --yellow: hsla(59, 100%, 56%, 1);
     --coffee: hsla(27, 100%, 30%, 1);
     --white: #ffffff;
     --black: #000000;
     /* size */
-    --size-a: 350px;
+    --size-a: 300px;
     --radius: 25px;
+    --border: 2px;
 }
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 *,
@@ -32,6 +34,7 @@ main{
     flex-direction: column;
     flex-wrap: wrap;
     border-radius: var(--radius);
+    box-shadow: -1px 15px 30px -10px;
 }
 /* Main img */
 .card-img{
@@ -42,7 +45,11 @@ main{
     display: flex;
 }
 .card-img > img{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
     width: inherit;
+    margin-left: -45px;
 }
 /* Body */
 .card-body{
@@ -91,6 +98,16 @@ main{
     flex-grow: 1;
     text-align: center;
 }
+.skills:nth-child(2){
+    border-left: var(--border) solid var(--orangeL);
+    border-right: var(--border) solid var(--orangeL);    
+}
+.skills:first-child,
+.skills:nth-child(2),
+.skills:last-child{
+    border-top: var(--border) solid var(--orangeL);
+}
+
 .skills > img{
     width: 55px;
 }
